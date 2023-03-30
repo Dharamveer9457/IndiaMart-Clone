@@ -7,6 +7,9 @@ let Show=document.getElementById("show")
 
 
 Submit.addEventListener("click",(e)=>{
+    if(Name.value==="admin" && Email.value==="admin@gmail.com" && Password.value==="admin"){
+        window.location.href="admin.html"
+    }
 e.preventDefault();
 
 let Lpdata=JSON.parse(localStorage.getItem("form"))||[];
@@ -18,5 +21,8 @@ let user = Lpdata.find((data) => data.name === Name.value && data.email === Emai
         else{
             Show.innerText="Invalid Email or Password."
         }
+
+        
+
 
 })
