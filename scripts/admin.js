@@ -38,8 +38,8 @@ function display(data){
       let img = document.createElement("img")
       img.src = elem.image
 
-    //   let des = document.createElement("p")
-    //   des.innerText = elem.description
+      let des = document.createElement("p")
+      des.innerText = elem.description
 
       let category = document.createElement("h3")
       category.innerText = elem.category
@@ -50,8 +50,8 @@ function display(data){
       let price = document.createElement("h3")
       price.innerText = "Rs  "+elem.price
 
-      let rating = document.createElement("h3")
-      rating.innerText = elem.rating
+    //   let rating = document.createElement("h3")
+    //   rating.innerText = elem.rating
 
       let del = document.createElement("button")
       del.innerText = "DELETE"
@@ -67,7 +67,7 @@ function display(data){
         console.log("edit clicked")
     })
 
-      cont.append(img,category,brand,price,rating,del,edit)
+      cont.append(img,category,brand,price,des,del,edit)
 
       maincont.append(cont)
     })
@@ -104,7 +104,7 @@ try {
         brand:document.getElementById("brand").value,
         category:document.getElementById("category").value,
         price:document.getElementById("price").value,
-        rating:document.getElementById("rating").value,
+        description:document.getElementById("rating").value,
         image:document.getElementById("img").value
     }
 // console.log(obj)
