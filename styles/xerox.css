@@ -6,14 +6,24 @@
     font-family: 'Poppins', sans-serif;
 }
 .nav{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     height: 50px;
 }
 .body{
     width: 92%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: auto;
+}
+.body > p:nth-child(1),
+.body > p:nth-child(1) > a,
+.body > p:nth-child(1) > span
+{
+    font-size: 14px;
+    color: grey;
+}
+.body > p:nth-child(1) > span{
+    color: black;
 }
 #xerhead{
     font-size: 25px;
@@ -22,8 +32,11 @@
     margin-top: 5px;
     padding: 5px;
 }
+.body > p:nth-child(2) > span:nth-child(2){
+    color: grey;
+}
 .headder{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     /* height: 30px; */
     margin-top: 8px;
@@ -39,7 +52,7 @@
 }
 .headder > div:nth-child(1) > div{
     display: inline;
-    background-color: red;
+    /* background-color: red; */
     padding-top: 5px;
     padding-bottom: 8px;
     border: 0.7px solid grey;
@@ -117,15 +130,16 @@
 
 .filter{
     width: 20%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 700px;
 }
 
 .items{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     grid-template-columns: repeat(3,1fr);
     margin-left: 15px;
+    height: auto;
 }
 
 .products_filter_page{
@@ -158,8 +172,9 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+#items-Cards > div > h5,
 #items-Cards > div > p,
-#items-Cards > div > h3{
+#items-Cards > div > h4{
     margin-top: 10px;
     text-align: center;
     background-color: white;
@@ -171,17 +186,72 @@
     padding: 9px 20px 9px 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: lightblue;
+    background-color: rgb(245, 212, 245);
     border-radius: 4px;
     color: white;
-    border: 1px solid blue;
+    border: none;
 }
 
 #items-Cards > div > button:hover{
-    background-color: aquamarine;
+    background-color: lightblue;
     cursor: pointer;
 }
 
 #items-Cards > div:hover{
     box-shadow: rgba(174, 224, 9, 0.15) 1.95px 1.95px 2.6px;
+}
+
+#pagination{
+    height: 20px;
+    width: 50%;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* Loook for this when adding the footer part */
+    bottom: 0px;
+}
+
+#pagination > button{
+    width: 13.2%;
+    height: 25px;
+    margin-right: 1%;
+}
+.checkbox{
+    display: block;
+}
+
+.filter > div:nth-child(1) > p{
+    background-color:#ffffff;
+    margin-left: 10px;
+}
+.filter > div:nth-child(1),
+.filter > div:nth-child(2){
+    margin-bottom: 20px;
+    /* border: 1px solid red; */
+    background-color: #ffffff;
+}
+
+#filterByPrice{
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 70%;
+    height: 25px;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    outline: none;
+}
+
+.filter > div:nth-child(2)>p,
+.filter > div:nth-child(2)>label{
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.filter > div:nth-child(2)>p{
+    margin-top: 20px;
+}
+.filter > div:nth-child(2)>label > input{
+    /* margin-right: 10px; */
+    width: 30px;
 }
