@@ -4,24 +4,61 @@
 let ItemCardsDiv = document.getElementById("items-Cards");
 let paginationDiv = document.getElementById("pagination");
 let sortby = document.getElementById("filterByPrice");
+let sectionData = JSON.parse(localStorage.getItem("splicedItem")) || [];
+let TotalProducts = document.getElementById("TotalProd")
+let checkboxValue = document.querySelectorAll(".checkboxbtn");
+let filterArr = [];
+
+for(var checkbox of checkboxValue){
+    checkbox.addEventListener("click",function(){
+        if(this.checked == true){
+            filterArr.push(this.value)
+        }
+        else if(this.checked == false){
+            for(let i = 0 ; i < filterArr.length ; i++){
+                if(filterArr[i] === this.value){
+                    filterArr.splice(i,1);
+                }
+            }
+        }
+        let ans = sectionData.filter((ele)=>{
+            if(filterArr.includes(ele.brand.toUpperCase())){
+                return true
+            };
+        })
+
+        console.log(filterArr)
+        DispalyData(ans)
+        console.log(ans)
+    })
+}
+
+
 
 async function fetchdata(){
     try{
-        let promise = await fetch("https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-tech-products");
+        let promise = await fetch("https://6398f4a7fe03352a94e2b91e.mockapi.io/Ecommerce");
 
         let data = await promise.json();
     
-        console.log(data.data);
-        let newData = data.data;
+        console.log(data);
+        
+        let newData = data.filter((ele)=>{
+           if(ele.category === "Xerox Machines"){
+            return true
+           }
+        })
+        TotalProducts.innerText = newData.length+" ";
 
         let page;
-        let limit = 8;
+        let limit = 18;
         let ans1 = newData.slice(0,limit)
         
 
         DispalyData(ans1);
 
         for(let i = 1 ; i  < 8 ; i++){
+            filterArr = []
             let btnsreturned = createBtn(i);
             btnsreturned.addEventListener("click",function(){
                 console.log(btnsreturned.innerText)
@@ -29,7 +66,7 @@ async function fetchdata(){
                 let start = (Number(page)-1)*limit;
                 let end = Number(page)*limit;
                 let ans = newData.slice(start,end);
-
+                localStorage.setItem("splicedItem",JSON.stringify(ans))
                 // sorting event for sorting the data with respect to price in ascending or descending order;
 
                 sortby.addEventListener("change",function(){
@@ -46,11 +83,9 @@ async function fetchdata(){
                         DispalyData(ans2)
                     }
                 })
-                // end of sorting->>>>
-
-
-
+                // end of sorting->>>>>>>
                 DispalyData(ans)
+
             })
             paginationDiv.append(btnsreturned)
         }
@@ -62,7 +97,7 @@ async function fetchdata(){
 
 fetchdata();
 
-
+let Cartarray = JSON.parse(localStorage.getItem("cart"))||[];
 
 function DispalyData(data){
     ItemCardsDiv.innerHTML = "";
@@ -71,7 +106,7 @@ function DispalyData(data){
 
 
         let image = document.createElement("img");
-        image.setAttribute("src",ele.img);
+        image.setAttribute("src",ele.image);
 
         let ImageDiv = document.createElement("div");
         ImageDiv.append(image);
@@ -80,7 +115,7 @@ function DispalyData(data){
         brandName.innerText = ele.brand.toUpperCase();
 
         let details = document.createElement("p");
-        details.innerText = ele.details;
+        details.innerText = ele.description;
 
         let price = document.createElement("h5");
 
@@ -89,6 +124,10 @@ function DispalyData(data){
         let BtnCart = document.createElement("button");
         BtnCart.innerText = `ADD TO CART`;
 
+        BtnCart.addEventListener("click",function(){
+            Cartarray.push(ele)
+            localStorage.setItem("cart",JSON.stringify(Cartarray))
+        })
 
         Cards.append(ImageDiv,brandName,details,price,BtnCart);
 
