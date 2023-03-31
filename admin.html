@@ -8,11 +8,20 @@
     <link rel="stylesheet" href="./styles/admin.css">
 </head>
 <body>
+    <div id="nav">
+        <div id="logoImg">
+            <img src="./images/megaMartLogo.png" alt="">
+        </div>
+        <div id="proName"><img src="./images/NameLogo.png" alt=""></div>
+        <div id="adminLogout"><button>LogOut</button></div>
+    </div>
+    <div id="bigimg"><img src="./images/bigImage1.jpg" alt=""></div>
  <div id="total_cart">
-<div id="total_item">Total Number of Items</div>
-<div id="added_item">Total Number of added Items</div>
+<div id="total_item">Total Number of Items :- <br><span id="totalItem">0</span></div>
+<div id="added_item">Total Number of added Items :- <br><span id="add_item">0</span></div>
 <div id="update_item">Total Number of updated Items</div>
-<div id="delete_item">Total Number of Deleted Items</div>
+<div id="delete_item">Total Number of Deleted Items :-<br><span id="del_item">0</span>
+</div>
 
 
 
@@ -22,23 +31,27 @@
 
     <div id="main">
     <div id="data">
+        <div id="firstForm">
+    
         <form action="">
-            <h1>Add new Data here</h1>
+            <h1>Add New Data </h1>
+            <label for="">Enter Category</label><br>
+            <input type="text" placeholder="Enter Category Here" id="category"><br><br>
             <label for="">Enter Brand</label><br>
             <input type="text" placeholder="Enter brand" id="brand"><br><br>
             <label for="">Enter Name</label><br>
-            <input type="text" placeholder="Enter Name" id="category"><br><br>
+            <input type="text" placeholder="Enter Name" id="name"><br><br>
             <label for="">Enter price</label><br>
             <input type="number" placeholder="Enter price" id="price"><br><br>
             <label for="">Enter Description</label><br>
-            <input type="float" placeholder="Enter Description" id="rating"><br><br>
+            <input type="float" placeholder="Enter Description" id="description"><br><br>
              
              <label for="">Enter Image URL</label><br>
              <input type="text" placeholder="Enter Image URL" id="img"><br><br>
             <input type="submit" id="submit">
 
         </form>
-
+    </div>
 
 
 
@@ -64,10 +77,11 @@
         <h1 id="team">Team Member</h1>
         <hr>
         <h3 class="name">Harshranjan Kumar</h3>
-        <h3 class="name">Aditya Tiwari</h3>
-        <h3 class="name">Dharam Veer </h3>
-        <h3 class="name">Ankush N</h3>
-        <h3 class="name">Abhiraj</h3>
+        <hr>
+        <h3 class="name">Aditya Tiwari</h3><hr>
+        <h3 class="name">Dharam Veer </h3><hr>
+        <h3 class="name">Ankush N</h3><hr>
+        <h3 class="name">Abhiraj</h3><hr>
     </div>
 </div>
 </body>

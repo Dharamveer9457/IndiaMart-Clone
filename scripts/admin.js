@@ -18,18 +18,21 @@ priceUdateForm.addEventListener("submit",(e)=>{
 
 
 
-
+let fetchedData = []
 async function fetchFun(){
     try {
         let res = await fetch(url)
     res = await res.json()
+    fetchedData = res;
     console.log(res)
+    document.getElementById("totalItem").innerText = res.length;
     display(res)
     } catch (error) {
         console.log(error)
     }
 }
 fetchFun()
+
 let maincont = document.getElementById("maincont")
 function display(data){
     maincont.innerHTML = ""
@@ -48,30 +51,47 @@ function display(data){
       brand.innerText = elem.brand
 
       let price = document.createElement("h3")
-      price.innerText = "Rs  "+elem.price
+      price.innerText = "Rs. "+elem.price
+
+      let name = document.createElement("h3")
+      name.innerText = elem.name
 
     //   let rating = document.createElement("h3")
     //   rating.innerText = elem.rating
 
+    let btncont  = document.createElement("div")
+btncont.setAttribute("id","btncont")
+
       let del = document.createElement("button")
+      del.setAttribute("id","delbtn")
       del.innerText = "DELETE"
       del.addEventListener("click",()=>{
         delFun(elem.id)
       })
 
       let edit = document.createElement("button")
+      edit.setAttribute("id","editbtn")
       edit.innerText = "EDIT"
     edit.addEventListener("click",()=>{
         globaldata = elem
         showupdatePriceForm()
         console.log("edit clicked")
     })
-
-      cont.append(img,category,brand,price,des,del,edit)
+btncont.append(del,edit)
+      cont.append(img,category,name,brand,price,des,btncont)
 
       maincont.append(cont)
+
+
+    //   let count = 0
+    //   document.getElementById("totalItem").innerText = count;
+    //   for(let i=0;i<fetchedData.length;i++){
+    //       count++
+    //   }
+
     })
 }
+
 
 async function delFun(id){
 try {
@@ -82,6 +102,12 @@ try {
         }
     })
     res = await res.json()
+    document.getElementById("del_item").innerText++
+    if((document.getElementById("del_item").innerText)<10){
+        document.getElementById("del_item").innerText = "0"+document.getElementById("del_item").innerText
+    }
+    
+    
     fetchFun()
 } catch (error) {
     console.log(error)
@@ -96,15 +122,17 @@ form.addEventListener("submit",(e)=>{
 updateData()
 })
 
+let added_data = JSON.parse(localStorage.getItem("add_data")) || []
 
 async function updateData(){
 try {
     let obj = {
         // id:document.getElementById("id").value,
-        brand:document.getElementById("brand").value,
         category:document.getElementById("category").value,
+        brand:document.getElementById("brand").value,
+        name:document.getElementById("name").value,
         price:document.getElementById("price").value,
-        description:document.getElementById("rating").value,
+        description:document.getElementById("description").value,
         image:document.getElementById("img").value
     }
 // console.log(obj)
@@ -115,6 +143,15 @@ try {
         },
         body:JSON.stringify(obj)
     })
+    // upd_data = upd_data++
+     upd_data = document.getElementById("add_item").innerText++
+    added_data.push(upd_data)
+    if(added_data<10){
+        added_data = "0"+added_data
+        localStorage.setItem("add_data",JSON.stringify(added_data))
+    }
+ localStorage.setItem("add_data",JSON.stringify(added_data))
+
     res = await res.json()
     console.log("added")
 fetchFun()

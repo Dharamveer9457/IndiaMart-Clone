@@ -1,7 +1,62 @@
+#nav{
+    width: 90%;
+    margin: auto;
+    display: flex; 
+     justify-content: space-around;
+    align-items: center;
+    margin-bottom: 24px;
+    background-color: aqua;
+    
+}
+#logoImg{
+    width: 12%;
+}
+#logoImg img{
+    width: 85%;
+}
+#proName{
+    width: 35%;
+}
+#proName img{
+    width: 90%;
+}
+#adminLogout button{
+    width: 100px;
+    padding: 10px;
+    
+    background-color: brown;
+    
+    color: aqua;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+}
+
+#adminLogout button:hover{
+    cursor: pointer;
+    font-style: italic;
+   /* color: aqua; */
+   color: red;
+   font-weight: bolder;
+   background-color: rgb(52, 119, 177);
+}
+#bigimg{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 24px;
+}
+#bigimg img{
+    width: 100%;
+}
+
+
+
+
+
 #total_cart{
     width: 90%;
     margin: auto;
-    height: 150px;
+    /* height: 150px; */
      /* border: 1px solid red; */
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; 
     margin-bottom: 40px;
@@ -22,6 +77,7 @@
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border-radius: 8px;
     background-color: rgb(47, 43, 43);
+    margin-bottom: 18px;
 }
 #total_cart #added_item{
     width: 20%;
@@ -30,6 +86,7 @@
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border-radius: 8px;
     background-color: rgb(47, 43, 43);
+    margin-bottom: 18px;
 }
 #total_cart #update_item{
     width: 20%;
@@ -38,6 +95,7 @@
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border-radius: 8px;
     background-color: rgb(47, 43, 43);
+    margin-bottom: 18px;
 }
 #total_cart #delete_item{
     width: 20%;
@@ -46,15 +104,27 @@
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border-radius: 8px;
     background-color: rgb(47, 43, 43);
+    margin-bottom: 18px;
+}
+#del_item{
+    color: green;
+    font-size: 25px;
+    font-weight: bolder;
+}
+#add_item{
+    color: green;
+    font-size: 25px;
+    font-weight: bolder;
 }
 
 
 #main{
     display: flex;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 #maincont{
-    width: 50%;
+    width: 70%;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -68,21 +138,59 @@
     border-radius: 10px;
 }
 #maincont div img{
-    width: 80%;
+    width: 90%;
     /* margin: auto; */
     margin: 5px;
     height: 150px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 }
+
+#btncont {
+    display: flex;
+    justify-content: space-between;
+    /* padding-left: 20px; */
+    /* background-color: rgb(153, 153, 173); */
+    border: none;
+    color: red;
+}
+#btncont button{
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    /* background-color: cornflowerblue; */
+}
+#delbtn{
+    background-color: red;
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    
+}
+#delbtn:hover{
+    cursor: pointer;
+    background-color: rgb(65, 5, 5);
+    font-style: oblique;
+}
+#editbtn{
+    background-color: green;
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    /* font-weight: bolder; */
+}
+#editbtn:hover{
+    cursor: pointer;
+    background-color: rgb(146, 234, 14);
+    color: red;
+   font-style: oblique;
+}
+
 
 
 #team_member{
     width: 15%;
-    /* margin: auto; */
-    /* border: 1px solid gray; */
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    /* text-align: center; */
     padding-left: 20px;
-    /* height: 350px; */
 }
 #team{
     color: rgb(122, 182, 48);
@@ -91,13 +199,27 @@
     color: maroon;
 }
 
+
 #data{
-    width: 30%;
+    width: 28%;
     /* height: 500px; */
     border: 1px solid gray;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     
 }
+
+#firstForm{
+    width: 80%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    /* height: 30%; */
+   
+}
+#firstForm form{
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
 
 #data form{
     width: 80%;
@@ -105,24 +227,67 @@
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 
 }
+#data form h1{
+    color: green;
+}
+
 #data input{
-height: 25px;
-width: 80%;
+height: 40px;
+width: 90%;
 }
 #data label{
     font-size: 25px;
 }
 #submit{
-    /* display: block; */
     
-    /* padding-left: 18px;
-    padding-right: 18px;
-    padding-top: 8px;
-    padding-bottom: 18px; */
     background-color: rgb(150, 135, 124);
-    color: rgb(232, 139, 25);
+    color: rgb(65, 48, 65);
     font-size: 30px;
     border: none;
     border-radius: 8px;
-    /* height: 50px; */
+    
+}
+#submit:hover{
+    cursor: pointer;
+    background-color: rgb(65, 5, 5);
+    color: white;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+@media all and (min-width:776px) and (max-width:1050px){
+    #maincont{
+        grid-template-columns: repeat(3,1fr);
+    }   
+    /* #total_cart{ */
+        /* flex-direction: column; */
+        /* display: none; */
+    /* } */
+    #data{
+        display: none;
+    }
+    #team_member{
+        display: none;
+    }
+    
+    }
+
+
+
+
+@media all and  (max-width:775px){
+#maincont{
+    grid-template-columns: repeat(2,1fr);
+}   
+#total_cart{
+    flex-direction: column;
+    /* display: none; */
+}
+#data{
+    display: none;
+}
+#team_member{
+    display: none;
+}
+
 }
