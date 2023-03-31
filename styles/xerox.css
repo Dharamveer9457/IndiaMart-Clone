@@ -94,6 +94,9 @@
     background-color: white;
     margin: auto;
     text-align: center;
+    color: black;
+    font-size: medium;
+    letter-spacing: 1px;
 }
 .headder > div:nth-child(2) > p > a{
     background-color: white;
@@ -101,6 +104,7 @@
     font-family: 'Poppins', sans-serif;
     position: relative;
     padding-bottom: 6px;
+    color: #000000;
 }
 .headder > div:nth-child(2) > p > a::after{
     content: "";
@@ -170,6 +174,7 @@
     /* border: 1px solid red; */
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px 0px 0px 0px;
 }
 
 #items-Cards > div > h5,
@@ -217,13 +222,16 @@
     height: 25px;
     margin-right: 1%;
 }
+#pagination > button:hover{
+    background-color: lightblue;
+}
 .checkbox{
     display: block;
 }
 
 .filter > div:nth-child(1) > p{
     background-color:#ffffff;
-    margin-left: 10px;
+    padding: 20px;
 }
 .filter > div:nth-child(1),
 .filter > div:nth-child(2){
@@ -233,7 +241,7 @@
 }
 
 #filterByPrice{
-    margin-left: 10px;
+    margin-left: 20px;
     margin-top: 10px;
     width: 70%;
     height: 25px;
@@ -245,13 +253,19 @@
 .filter > div:nth-child(2)>p,
 .filter > div:nth-child(2)>label{
     background-color: #ffffff;
-    margin-bottom: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
+    padding: 10px;
+
 }
 .filter > div:nth-child(2)>p{
     margin-top: 20px;
 }
-.filter > div:nth-child(2)>label > input{
-    /* margin-right: 10px; */
-    width: 30px;
+.checkboxbtn{
+    display: inline;
+    margin-right: 10px;
+    height: 18px;
+    width: 18px;
+}
+.items > div:nth-child(1){
+    display: flex;
 }
