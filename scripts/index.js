@@ -1,5 +1,5 @@
 
-let img1 = "https://hm.imimg.com/imhome_gifs/home-banner-4.jpg"
+let img1 = "https://hm.imimg.com/imhome_gifs/27th_anniversary.jpg"
 let img2 =  "https://hm.imimg.com/imhome_gifs/passion-business.jpg"
 
 var slideshowimages = [img1,img2]

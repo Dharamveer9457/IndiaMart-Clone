@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: #ece9e9;
 }
 
 nav{
@@ -79,15 +80,7 @@ nav>img:nth-child(2){
     left: 50%;
     transform: translate(-50%, -50%);
   }
-/* .search-container {
-	margin: 20px auto;
-	text-align: center;
-}
 
-form {
-	display: inline-block;
-}
-*/
 input[type="text"] {
     width: 70%;
 	padding: 10px;
@@ -184,7 +177,7 @@ button[type="submit"] {
     float: left;
     width: 18.6%;
     padding: 10px;
-    background-color: #ccc;
+    background-color: #757575;
     height: 350px;
   }
   
@@ -314,27 +307,40 @@ button[type="submit"] {
 
 /* <!--------------------------------------------Category Option------------------------------------------> */
 
+.main{
+  width: 95%;
+  margin: auto;
+  padding: 10px 0px 10px 0px;
+  border: 1px solid rgb(213, 210, 210);
+  border-top: 3px solid #2e3192;
+  background-color: white;
+}
+
 #heading{
-  margin-left: 5%;
+  margin-left: 2.5%;
   font-size: 30px;
   color: #000000;
+  font-family: 'Rubik', sans-serif; color: rgb(66, 64, 62);
+  text-decoration: none;
 }
 
 #heading:hover{
   font-weight: bold;
+  text-decoration: underline;
 }
+
 .category{
-  width:90%;
+  width:95%;
   display: flex;
   margin: auto;
-  border: 1px solid black;
   height:400px;
+  margin-top: 10px;
 }
 
 .overview{
-  width: 20%;
-  border: 1px dotted red;
+  width: 22%;
   position: relative;
+  margin: auto;
 }
 
 .overview>img{
@@ -346,6 +352,7 @@ button[type="submit"] {
   position: absolute;
   color: white;
   font-size: 20px;
+  font-weight: bold;
   top: 50%;
   left: 20px;
 }
@@ -354,6 +361,7 @@ button[type="submit"] {
   position: absolute;
   color: white;
   font-size: 20px;
+  font-weight: bold;
   top: 58%;
   left: 20px;
 }
@@ -362,6 +370,7 @@ button[type="submit"] {
   position: absolute;
   color: white;
   font-size: 20px;
+  font-weight: bold;
   top: 66%;
   left: 20px;
 }
@@ -370,8 +379,10 @@ button[type="submit"] {
   position: absolute;
   color: white;
   font-size: 20px;
+  font-weight: bold;
   top: 74%;
   left: 20px;
+
 }
 
 #viewBtn{
@@ -394,5 +405,40 @@ button[type="submit"] {
 }
 .subcategory{
   width: 80%;
-  border: 1px dotted green;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.sub{
+  display: flex;
+  margin: auto;
+  width: 90%;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  padding: 10px 0px 10px 0px;
+}
+
+.thumbnail{
+  margin: auto;
+  width: 30%;
+}
+
+.thumbnail>img{
+  width: 80px;
+  margin: auto;
+}
+
+.link{
+  margin: auto;
+  width: 60%;
+  line-height: 25px;
+}
+
+.link>a:nth-child(1){
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.link>a{
+  color: #000000;
+  text-decoration: none;
 }
