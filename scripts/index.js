@@ -16,3 +16,33 @@ setInterval(function(){
     }
     slideshowBox.appendChild(img)
 },1500)
+
+//-------------------------------Login Functionality-----------------------------------------
+
+let userlist = JSON.parse(localStorage.getItem("form"))||[]
+
+let username = document.querySelector("#signin>a")
+
+if(userlist.length>0){
+ username.textContent = `${userlist[0].name}`
+}
+
+let userbtn = document.querySelector("#signin>img")
+
+userbtn.addEventListener("click",()=>{
+    window.location.href = "signin.html"
+})
+
+let cartbtn = document.querySelector("#cart>img")
+
+cartbtn.addEventListener("click",()=>{
+    window.location.href = "cart.html"
+})
+
+let shopbtn = document.querySelector("#shopping>img")
+
+shopbtn.addEventListener("click",()=>{
+    window.location.href = "xerox.html"
+})
+
+

@@ -35,6 +35,7 @@ nav>img:nth-child(2){
  cursor: pointer;
  filter: contrast();
  filter:invert();
+ margin: auto;
 }
 
 #navbox img:hover{
@@ -61,6 +62,13 @@ nav>img:nth-child(2){
     text-align: center;
 }
 
+/* #signin{
+  margin: auto;
+  font-size: 18px;
+  position: absolute;
+  right: 10%;
+} */
+
 #search-container{
     position: relative;
     text-align: center;
@@ -74,7 +82,7 @@ nav>img:nth-child(2){
 }
 
 .search{
-    width: 30%;
+    width: 35%;
     position: absolute;
     top: 40%;
     left: 50%;
@@ -96,6 +104,8 @@ button[type="submit"] {
 	border-radius: 5px;
 	background-color: #007bff;
 	color: #fff;
+  font-weight: bold;
+  font-size: 16px;
 	cursor: pointer;
 } 
 
@@ -341,11 +351,14 @@ button[type="submit"] {
   width: 22%;
   position: relative;
   margin: auto;
+  
 }
 
 .overview>img{
   width: 100%;
   height: 100%;
+  filter: blur(2px);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 #first-text{
@@ -353,8 +366,9 @@ button[type="submit"] {
   color: white;
   font-size: 20px;
   font-weight: bold;
+  font-family: 'Rubik', sans-serif;
   top: 50%;
-  left: 20px;
+  left: 18px;
 }
 
 #second-text{
@@ -362,17 +376,19 @@ button[type="submit"] {
   color: white;
   font-size: 20px;
   font-weight: bold;
+  font-family: 'Rubik', sans-serif;
   top: 58%;
-  left: 20px;
+  left: 18px;
 }
 
 #third-text{
   position: absolute;
   color: white;
   font-size: 20px;
+  font-family: 'Rubik', sans-serif;
   font-weight: bold;
   top: 66%;
-  left: 20px;
+  left: 18px;
 }
 
 #fourth-text{
@@ -380,8 +396,9 @@ button[type="submit"] {
   color: white;
   font-size: 20px;
   font-weight: bold;
+  font-family: 'Rubik', sans-serif;
   top: 74%;
-  left: 20px;
+  left: 18px;
 
 }
 
@@ -395,7 +412,7 @@ button[type="submit"] {
   border-radius: 5px;
   font-size: 15px;
   top: 88%;
-  left: 20px;
+  left: 18px;
   cursor: pointer;
 }
 
@@ -441,4 +458,82 @@ button[type="submit"] {
 .link>a{
   color: #000000;
   text-decoration: none;
+}
+
+/* <!----------------------------------------------Featured Categories------------------------------------------------>*/
+
+#featureDiv{
+ width: 95%;
+ margin: auto;
+ background-color: white;
+ padding-bottom: 10px;
+}
+
+#featureDiv>p{
+  margin-left: 0.5%;
+  font-family: 'Rubik', sans-serif;
+  font-size: 28px;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#featured{
+  display: flex;
+  width: 99%;
+  margin: auto;
+}
+
+.featured-categories{
+  width: 19%;
+  margin: auto;
+  margin-left: 7px;
+  background-color: white;
+  padding: 10px 0px 10px 0px;
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  border: 1px groove rgb(203, 200, 200);
+}
+
+.featured-categories>button{
+  background-color: #068076;
+  color: white;
+  border: none;
+  width: 40%;
+  height: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.featured-categories>button:hover{
+  font-weight: bold;
+}
+
+.featured-categories>img:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.featured-categories>img{
+  width: 70px;
+  height: 70px;
+}
+
+#more>button{
+  border: 1px solid #484ba0;
+  background-color: white;
+  color: #484ba0;
+  width: 45%;
+  height: 35px;
+}
+
+#more>button:hover{
+  background-color: #484ba0;
+  color: white;
+}
+
+#more>p{
+  color: rgb(141, 138, 138);
 }
