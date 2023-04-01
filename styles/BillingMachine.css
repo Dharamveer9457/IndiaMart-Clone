@@ -173,7 +173,6 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap:30px;
-    
 }
 #items-Cards > div{
     /* border: 1px solid red; */
@@ -200,7 +199,7 @@
     border-radius: 4px;
     color: black;
     border: none;
-    font-weight: bold;
+
 }
 
 #items-Cards > div > button:hover{
@@ -315,10 +314,10 @@
     background-color: white;
     font-family: sans-serif;
     color: rgb(95, 93, 93);
-
 }
 
 
+/* Media query for small screen */
 
 @media only screen and (min-width:360px) and (max-width: 600px){
     #items-Cards{
@@ -340,7 +339,7 @@
     }
 }
 
-/* media query */
+/*  */
 @media only screen and (min-width:601px) and (max-width: 800px){
     #items-Cards{
         display: grid;
