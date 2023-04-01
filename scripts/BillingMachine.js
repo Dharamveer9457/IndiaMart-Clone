@@ -4,7 +4,7 @@
 let ItemCardsDiv = document.getElementById("items-Cards");
 let paginationDiv = document.getElementById("pagination");
 let sortby = document.getElementById("filterByPrice");
-let sectionData = JSON.parse(localStorage.getItem("splicedItem1")) || [];
+let sectionData = JSON.parse(localStorage.getItem("splicedItem")) || [];
 let TotalProducts = document.getElementById("TotalProd")
 let checkboxValue = document.querySelectorAll(".checkboxbtn");
 let filterArr = []
@@ -13,7 +13,7 @@ for(var checkbox of checkboxValue){
     checkbox.addEventListener("click",function(){
         if(this.checked == true){
             filterArr.push(this.value)
-            console.log(filterArr)
+            console.log(filterArr);
             console.log(sectionData)
         }
         else if(this.checked == false){
@@ -22,7 +22,7 @@ for(var checkbox of checkboxValue){
                     filterArr.splice(i,1);
                 }
             }
-            console.log(filterArr)
+            console.log(filterArr);
             console.log(sectionData)
         }
         let Filteredarr = sectionData.filter((ele)=>{
@@ -36,6 +36,7 @@ for(var checkbox of checkboxValue){
         else{
             DispalyData(Filteredarr)
         }
+        
     })
 }
 
@@ -50,7 +51,7 @@ async function fetchdata(){
         console.log(data);
         
         let newData = data.filter((ele)=>{
-           if(ele.category === "Xerox Machines"){
+           if(ele.category === "Billing Machine"){
             return true
            }
         })
@@ -67,25 +68,25 @@ async function fetchdata(){
             filterArr = []
             let btnsreturned = createBtn(i);
             btnsreturned.addEventListener("click",function(){
-                // console.log(btnsreturned.innerText)
+                console.log(btnsreturned.innerText)
                 page = btnsreturned.innerText;
                 let start = (Number(page)-1)*limit;
                 let end = Number(page)*limit;
                 let ans = newData.slice(start,end);
-                localStorage.setItem("splicedItem1",JSON.stringify(ans))
+                localStorage.setItem("splicedItem",JSON.stringify(ans))
                 // sorting event for sorting the data with respect to price in ascending or descending order;
 
                 sortby.addEventListener("change",function(){
                     // console.log(ans)
                     if(sortby.value === "L"){
                         ans.sort((a,b)=> a.price-b.price)
-                        // console.log(ans.price)
+                        console.log(ans.price)
                         DispalyData(ans)
                     }
                     else if(sortby.value === "H"){
                         console.log(sortby.value)
                         let ans2 = ans.sort((a,b)=>b.price - a.price)
-                        // console.log(ans2)
+                        console.log(ans2)
                         DispalyData(ans2)
                     }
                 })
