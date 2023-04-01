@@ -14,6 +14,7 @@ let priceUdateForm = document.getElementById("updatePriceForm")
 priceUdateForm.addEventListener("submit",(e)=>{
     e.preventDefault()
     updatePriceFun(globaldata.id)
+    hideupdatePriceForm()
 })
 
 
@@ -26,6 +27,24 @@ async function fetchFun(){
     fetchedData = res;
     console.log(res)
     document.getElementById("totalItem").innerText = res.length;
+    let count = 0
+for(let i=0;i<res.length;i++){
+    if(res[i].category == "Xerox Machines"){
+        count++
+    }
+}
+document.getElementById("xerox_item").innerText = count
+
+
+let count1 = 0
+for(let i=0;i<res.length;i++){
+    if(res[i].category == "Billing Machine"){
+        count1++
+    }
+}
+document.getElementById("billing_item").innerText = count1
+
+
     display(res)
     } catch (error) {
         console.log(error)
@@ -82,13 +101,6 @@ btncont.append(del,edit)
 
       maincont.append(cont)
 
-
-    //   let count = 0
-    //   document.getElementById("totalItem").innerText = count;
-    //   for(let i=0;i<fetchedData.length;i++){
-    //       count++
-    //   }
-
     })
 }
 
@@ -102,10 +114,7 @@ try {
         }
     })
     res = await res.json()
-    document.getElementById("del_item").innerText++
-    if((document.getElementById("del_item").innerText)<10){
-        document.getElementById("del_item").innerText = "0"+document.getElementById("del_item").innerText
-    }
+    
     
     
     fetchFun()
@@ -122,7 +131,7 @@ form.addEventListener("submit",(e)=>{
 updateData()
 })
 
-let added_data = JSON.parse(localStorage.getItem("add_data")) || []
+
 
 async function updateData(){
 try {
@@ -143,16 +152,7 @@ try {
         },
         body:JSON.stringify(obj)
     })
-    // upd_data = upd_data++
-     upd_data = document.getElementById("add_item").innerText++
-    added_data.push(upd_data)
-    if(added_data<10){
-        added_data = "0"+added_data
-        localStorage.setItem("add_data",JSON.stringify(added_data))
-    }
- localStorage.setItem("add_data",JSON.stringify(added_data))
-
-    res = await res.json()
+   res = await res.json()
     console.log("added")
 fetchFun()
 } catch (error) {
@@ -177,7 +177,14 @@ async function updatePriceFun(){
     })
     res = await res.json()
     fetchFun()
+    
     } catch (error) {
         console.log(error)
     }
 }
+
+
+let logoutbtn = document.getElementById("adminLogout")
+logoutbtn.addEventListener("click",()=>{
+    window.location.href = "index.html"
+})
