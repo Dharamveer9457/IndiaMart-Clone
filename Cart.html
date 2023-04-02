@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="./styles/Cart.css">
+</head>
+<body>
+ <h1 style="color:red">Cart Details</h1>
+ <div id="parent">
+    <div id="cart-container">
+        <!-- Here Append All the cart Products  -->
+      </div>
+      <div id="cartdesc">
+       
+        <div id="price"><h1  style="font-size: 40px;color: red;">Price Detail</h1></div>
+       
+        <div class="space">
+            <h1 >Total Cart Item:-</h1>
+            <h1  style="color:green"id="cart-item"> 0</h1>
+           </div>
+       
+       
+       
+        <div class="space" >
+        <h1 id="total">
+            Total Cart Price :- 
+          </h1>
+          <h1 style="color:green" id="cart-total">0</h1>
+
+       </div>
+       
+       
+       <div class="space">
+        <h1>Delivery Charge:-</h1>
+        <h1 style="color:green">40/-</h1>
+
+       </div>
+          
+         
+        
+          
+         <div class="space">
+            <h1 style="color: green;font-weight: 20px;" >
+                To Pay :-</span>
+              </h1>
+              <h1 style="color: green;font-weight: 20px;"><span id="topay">   0</h1>
+         </div>
+         <br>
+         <hr>
+         <h1 style="color:red">Shipping Details</h1>
+         <form>
+            <div class="space">
+                <label style="font-size: 25px;" for="fname">First Name:</label>
+                <input type="text" id="fname" name="fname">
+            </div>
+            <br>
+            <div class="space">
+                <label  style="font-size: 25px;" for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname">
+            </div>
+            <br>
+            <div class="space">
+                <label  style="font-size: 25px;" for="fname">House Number:</label>
+                <input type="text" id="Hname" name="fname">
+            </div>
+            <br>
+            <div class="space">
+                <label  style="font-size: 25px;" for="lname">City:</label>
+                <input type="text" id="City" name="lname">
+            </div>
+            <br>
+            <div class="space">
+                  
+            <label style="font-size: 25px;" for="fname">Pincode:</label>
+            <input type="text" id="Pincode" name="fname">
+            </div>
+            <br>
+            <div class="space">
+                <label  style="font-size: 25px;" for="lname">State:</label>
+            <input type="text" id="State" name="lname">
+            </div><br>
+            <hr>
+           
+            
+           
+         
+            
+           
+          </form>
+         <div style="width: 300px;margin: auto;height: 50px;">
+            <button id="BTN"style="display: block;margin: auto; font-size: 20px;height: 50px;background-color: aqua;color: black;border: none;margin-top:50px">
+                Proceed To Checkout
+              </button>
+          </div>
+          
+      </div>
+     
+ </div>
+
+ 
+  
+  <script src="./scripts/Cart.js"></script>
+</body>
+ 
+
+</html>
+
