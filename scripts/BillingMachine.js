@@ -131,15 +131,30 @@ function DispalyData(data){
         let BtnCart = document.createElement("button");
         BtnCart.innerText = `ADD TO CART`;
 
-        BtnCart.addEventListener("click",function(){
-            Cartarray.push(ele)
-            localStorage.setItem("cart",JSON.stringify(Cartarray))
+        BtnCart.addEventListener("click",()=>{
+            if(checkDuplicate(ele)){
+              alert("Product Already in Cart")
+            }else{
+              Cartarray.push({...ele,quantity:1})
+              localStorage.setItem("cart",JSON.stringify(Cartarray))
+              alert("Product Added To Cart")
+
+            }
         })
 
         Cards.append(ImageDiv,brandName,details,price,BtnCart);
 
         ItemCardsDiv.append(Cards);
     });
+}
+
+function  checkDuplicate(ele){
+    for(let i=0;i<Cartarray.length;i++){
+      if(Cartarray[i].id===ele.id){
+        return true
+      }
+    }
+    return false
 }
 
 function createBtn(i){
