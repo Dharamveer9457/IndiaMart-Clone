@@ -8,7 +8,8 @@ input{
     height: 2vw;
     width: 15vw;
     margin-top: 5px;
-    
+    border: none;
+    background-color: rgb(242, 238, 238);
 }
 .container{
     position: absolute;
@@ -23,28 +24,28 @@ input{
     top: 50%;
     left: 50%;
     transform: translate(-48%, -50%);
-     
+     margin-left: 150px;
   
 }
 #Submit{
     height: 2vw;
     width: 14.9vw;
     margin-top: 5px;
-    background-color: blue;
+    background-color: #F44347;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 0.3em;
 }
-#main{
+/* #main{
     box-sizing: border-box;
     background-color: antiquewhite;
     height: 610px;
     
-}
+} */
 form{
-    margin-left: 100px;
-    
+    margin-left: 10px;
+   
 }
 #check{
     margin-left: 19px;
@@ -66,6 +67,7 @@ outline: none;
 
 input[type=text]:focus,input[type=email]:focus,input[type=password]:focus {
 border: 3px solid rgb(31, 131, 170);
+
 }
 #Submit:hover{
 background-color: rgb(43, 43, 181);
@@ -73,4 +75,43 @@ background-color: rgb(43, 43, 181);
 #show{
 font-family: Arial, Helvetica, sans-serif;
 font-size: 13px;
+color:  red;
+}
+
+#item{
+    display: flex;
+    margin-left: 150px;
+}
+#creation{
+    width: 400px;
+    height: 396px;
+    box-shadow: #00000059 0px 5px 15px;
+    margin-top: 107px;
+    background-color: white;
+    margin-left: 117px;
+    background-color: #F44347;
+    border-radius: 0.3em;
+}
+#creation>p{
+    color: white;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 40px;
+    margin: 0;
+}
+#creation>h2{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 123px;
+    margin-top: 111px;
+}
+#creation>button{
+    border: 1px solid white;
+    border-radius: 0.8em ;
+    width: 6vw;
+    height: 2vw;
+    background-color: #F44347;
+    color: white;
+    margin-left: 160px;
+    margin-top: 30px;
 }
