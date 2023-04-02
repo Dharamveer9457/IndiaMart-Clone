@@ -3,6 +3,65 @@ body{
     margin: 0;
     padding: 0;
 }
+
+nav{
+    background-color: #373dac ;
+    height: 55px;
+    display: flex;
+}
+
+nav>img:nth-child(1){
+    width: 45px;
+    height: 47px;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+nav>img:nth-child(2){
+    width:15%;
+    margin-top: 8px;
+}
+
+#navbox{
+ display: flex;
+ width: 50%;
+ margin-left : 61%;
+ padding-top: 2px;
+}
+
+#navbox img{
+ width: 40px;
+ height: 35px;
+ cursor: pointer;
+ filter: contrast();
+ filter:invert();
+ margin: auto;
+}
+
+#navbox img:hover{
+    color: white;
+    opacity: .5;
+}
+
+#navbox a{
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+#navbox a:hover{
+    color: black;
+    font-weight: bold;
+}
+
+#navbox>div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+}
+
 input{
     display: block;
     height: 2vw;

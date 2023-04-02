@@ -1,12 +1,15 @@
 /* ******************************nav************************************ */
+body{
+    margin: 0;
+    padding: 0;
+}
 
 #nav{
-    width: 90%;
+    width: 100%;
     margin: auto;
     display: flex; 
-     justify-content: space-around;
+    justify-content: space-around;
     align-items: center;
-    margin-bottom: 24px;
     background-color: aqua;
     
 }
@@ -43,8 +46,7 @@
    background-color: rgb(52, 119, 177);
 }
 #bigimg{
-    width: 90%;
-    margin: auto;
+    width: 100%;
     margin-bottom: 24px;
 }
 #bigimg img{

@@ -36,13 +36,25 @@ userbtn.addEventListener("click",()=>{
 let cartbtn = document.querySelector("#cart>img")
 
 cartbtn.addEventListener("click",()=>{
-    window.location.href = "cart.html"
+    // if(userlist.length>0){
+    //  window.location.href = "Cart.html"
+    // }else{
+    //     alert("Please Login First")
+    // }
+    window.location.href = "Cart.html"
 })
 
 let shopbtn = document.querySelector("#shopping>img")
 
 shopbtn.addEventListener("click",()=>{
     window.location.href = "xerox.html"
+})
+
+
+let homebtn = document.querySelector("nav:nth-child(1)")
+
+cartbtn.addEventListener("click",()=>{
+    window.location.href = "Cart.html"
 })
 
 
