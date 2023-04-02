@@ -36,12 +36,13 @@ userbtn.addEventListener("click",()=>{
 let cartbtn = document.querySelector("#cart>img")
 
 cartbtn.addEventListener("click",()=>{
-    // if(userlist.length>0){
-    //  window.location.href = "Cart.html"
-    // }else{
-    //     alert("Please Login First")
-    // }
-    window.location.href = "Cart.html"
+    if(userlist.length>0){
+     window.location.href = "Cart.html"
+    }else{
+        alert("Please Login First")
+        window.location.href = "signin.html"
+    }
+    
 })
 
 let shopbtn = document.querySelector("#shopping>img")
@@ -51,10 +52,18 @@ shopbtn.addEventListener("click",()=>{
 })
 
 
-let homebtn = document.querySelector("nav:nth-child(1)")
+let homebtn1 = document.querySelector("#img1")
+let homebtn2 = document.querySelector("#img2")
 
-cartbtn.addEventListener("click",()=>{
-    window.location.href = "Cart.html"
+homebtn1.addEventListener('click',()=>{
+    window.location.href = "index.html"
 })
+
+homebtn2.addEventListener('click',()=>{
+    window.location.href = "index.html"
+})
+
+
+
 
 

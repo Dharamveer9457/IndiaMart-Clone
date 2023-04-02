@@ -310,3 +310,9 @@ width: 90%;
 }
 
 }
+
+#team_member p{
+    color :rgb(19, 105, 180);
+    font-size: 17px;
+    font-weight: bold;
+}

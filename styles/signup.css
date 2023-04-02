@@ -174,3 +174,84 @@ color:  red;
     margin-left: 160px;
     margin-top: 30px;
 }
+
+
+ /* ----------------------Footer--------------------- */
+
+ #feedbackbutton{
+    border:1px solid rgb(183, 177, 177);
+    width:80%;
+    height:50px;
+    text-align: center;
+    padding-top: 25px;
+    margin:auto;
+    font-size: 15px;
+    font-family: 'Courgette', cursive;
+    color:#535454
+  }
+  
+  .fa {
+    padding:15px;
+    width: 18px;
+    margin-left:5px;
+    margin-right: 5px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  
+  #mainfooter{
+    background-color: #c9c9c9;
+    line-height: 30px;
+  }
+  .footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    width:95%;
+    font-family: 'Open Sans', sans-serif;
+    font-size:13px
+  }
+  .footerbox p{
+    cursor: pointer;
+  }
+  #submitbutton{
+    font-size:13px;
+    border:none;
+    background-color: #000000;
+    color:white;
+    transition-duration: 0.4s;
+  }
+  #submitbutton:hover {
+    background-color: #959595;
+    color: rgb(0, 0, 0);
+  }
+  
+  #lastline{
+    background-color: #c9c9c9;
+    margin:auto;
+    border-top: 1px solid black;
+    margin-top: 2px;
+    text-align: center;
+    padding-top:2px;
+    font-size: 15px;
+    line-height: 25px;
+    padding-bottom:2px;
+  }

@@ -1,3 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #ece9e9;
+}
+
+nav{
+    background-color: #373dac ;
+    height: 55px;
+    display: flex;
+}
+
+nav>img:nth-child(1){
+    width: 45px;
+    height: 47px;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+nav>img:nth-child(2){
+    width:15%;
+    margin-top: 8px;
+}
+
+#navbox{
+ display: flex;
+ width: 50%;
+ margin-left : 61%;
+ padding-top: 2px;
+}
+
+#navbox img{
+ width: 40px;
+ height: 35px;
+ cursor: pointer;
+ filter: contrast();
+ filter:invert();
+ margin: auto;
+}
+
+#navbox img:hover{
+    color: white;
+    opacity: .5;
+}
+
+#navbox a{
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+#navbox a:hover{
+    color: black;
+    font-weight: bold;
+}
+
+#navbox>div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+}
 #checkout>div{
    
     display: flex;
@@ -18,14 +81,12 @@
     
 }
 #total{
-    
     position: relative;
     width: 200px;
     height: 200px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    margin-left:1000px;
+    margin-left:1100px;
     top: 80px;
-    
 }
 .main{
     display: inline;
@@ -82,7 +143,7 @@ form>button{
     cursor: pointer;
     height: 3vw;
     width: 7.3vw;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 #total>div{
@@ -97,3 +158,85 @@ form>button{
     margin-top: 13px;
     margin-left: 10px;
 }
+
+
+
+/* ----------------------Footer--------------------- */
+
+#feedbackbutton{
+    border:1px solid rgb(183, 177, 177);
+    width:80%;
+    height:50px;
+    text-align: center;
+    padding-top: 25px;
+    margin:auto;
+    font-size: 15px;
+    font-family: 'Courgette', cursive;
+    color:#535454
+  }
+  
+  .fa {
+    padding:15px;
+    width: 18px;
+    margin-left:5px;
+    margin-right: 5px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  
+  #mainfooter{
+    background-color: #c9c9c9;
+    line-height: 30px;
+  }
+  .footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    width:95%;
+    font-family: 'Open Sans', sans-serif;
+    font-size:13px
+  }
+  .footerbox p{
+    cursor: pointer;
+  }
+  #submitbutton{
+    font-size:13px;
+    border:none;
+    background-color: #000000;
+    color:white;
+    transition-duration: 0.4s;
+  }
+  #submitbutton:hover {
+    background-color: #959595;
+    color: rgb(0, 0, 0);
+  }
+  
+  #lastline{
+    background-color: #c9c9c9;
+    margin:auto;
+    border-top: 1px solid black;
+    margin-top: 2px;
+    text-align: center;
+    padding-top:2px;
+    font-size: 15px;
+    line-height: 25px;
+    padding-bottom:2px;
+  }
