@@ -1,0 +1,99 @@
+#checkout>div{
+   
+    display: flex;
+  width: 87%;
+  height: 70%;
+  background-color: #1E355F;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 20px;
+ 
+}
+#checkout>div>a{
+    
+    color: white;
+}
+#checkout>div>h2{
+    color: white;
+    
+}
+#total{
+    
+    position: relative;
+    width: 200px;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    margin-left:1000px;
+    top: 80px;
+    
+}
+.main{
+    display: inline;
+    
+
+}
+#checkout{
+   
+    width: 100%;
+    
+    position: relative;
+    bottom: 110px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  width: 40%;
+  margin: auto;
+
+   
+}
+#name{
+    display: block;
+    height: 2.5vw;
+    width: 34vw;
+    margin-top: 13px;
+}
+#number{
+    display: block;
+    height: 2.5vw;
+    width: 34vw;
+    margin-top: 13px;
+}
+#Date{
+   
+    height: 2.5vw;
+    width: 7vw;
+    margin-top: 13px;
+}
+
+form{
+    margin-left: 20px;
+   
+    
+}
+#checkout>h3{
+    margin-left: 20px;
+    color: rgb(64, 62, 62);
+    font-family:sans-serif;
+}
+form>button{
+    display: block;
+    margin-top: 13px;
+    border: none;
+    background-color:#096FB9;
+    color: white;
+    cursor: pointer;
+    height: 3vw;
+    width: 7.3vw;
+    margin-bottom: 10px;
+}
+
+#total>div{
+    margin-left: 5px;
+    text-align: center;
+   
+}
+#cvv{
+    
+    height: 2.5vw;
+    width: 7vw;
+    margin-top: 13px;
+    margin-left: 10px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/payment.css">
+</head>
+<body>
+    
+<div class="main">
+    <div id="total">
+        <div>
+            <h3>Order Summary</h3>
+            <p>Total Price</p>
+            <p >₹ <span class="total">200</span></p>
+            
+        </div>
+        
+    </div>
+    
+    <div id="checkout">
+        
+        <div>
+        <h2>Payment</h2>
+
+        <a href="./signin.html">Already a Costumer? Log in</a>
+       
+    </div>
+    <h3>payment method</h3>
+    <form action="">
+    <input type="radio" id="Credit">
+    <label for="Credit Card">Credit Card</label>
+    <input type="radio" id="Debit">
+    <label for="Debit Card">Debit Card</label>
+    
+    <input type="text" placeholder="Name of the Card" id="name">
+    <input type="number" placeholder="card number" id="number">
+    <input type="number" placeholder="Expiry Date" id="Date">
+    <input type="number" placeholder="cvv" id="cvv">
+    <button id="click">Continue</button>
+</form>
+</div>
+
+    
+</div>
+</body>
+</html>
+<script src="./scripts/payment.js"></script>
