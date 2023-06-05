@@ -6,7 +6,7 @@ Cloned Name : MegaMart.com<br>
 Tech Stacks : HTML, CSS, Javascript<br>
 Duration : 5 Days<br>
 Responsiveness : Partially Responsive<br>
-Teammates : 4 <br>
+Teammates : 5 <br>
 
 
 # Deployed link : https://makeshift-protest-7826.netlify.app/index.html
