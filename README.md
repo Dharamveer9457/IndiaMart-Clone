@@ -9,7 +9,7 @@ Responsiveness : Partially Responsive<br>
 Teammates : 5 <br>
 
 
-# Deployed link : https://makeshift-protest-7826.netlify.app/index.html
+# Deployed link : https://dapper-stroopwafel-ae683f.netlify.app
 
 
 
